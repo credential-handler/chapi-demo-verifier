@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/digitalbazaar/chapi-demo-verifier.git"
+    "url": "https://github.com/credential-handler/chapi-demo-verifier.git"
   },
   "author": {
     "name": "Digital Bazaar, Inc.",
@@ -14,9 +14,9 @@
   },
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/digitalbazaar/chapi-demo-verifier/issues"
+    "url": "https://github.com/credential-handler/chapi-demo-verifier/issues"
   },
-  "homepage": "https://github.com/digitalbazaar/chapi-demo-verifier",
+  "homepage": "https://github.com/credential-handler/chapi-demo-verifier",
   "dependencies": {},
   "devDependencies": {
     "http-server": "^0.12.3"
