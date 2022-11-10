@@ -1,5 +1,10 @@
 # chapi-demo-verifier Changelog
 
+## 2.0.1 - 2022-11-dd
+
+### Changed
+- Use `credential-handler-polyfill@3.0.1`.
+
 ## 2.0.0 - 2022-10-25
 
 ### Changed
