@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
   <!--Credential Handler API Polyfill-->
-  <script src="https://unpkg.com/credential-handler-polyfill@3.0.2/dist/credential-handler-polyfill.min.js"></script>
+  <script src="https://unpkg.com/credential-handler-polyfill@3/dist/credential-handler-polyfill.min.js"></script>
   <script src="config.js"></script>
 </head>
 
@@ -48,7 +48,7 @@
   </div>
   <script>
     async function onClickRequest() {
-      //Create Verifiable Presentation Request
+      // create Verifiable Presentation Request
       const testVpr = {
         query: [{
           type: "QueryByExample",
@@ -68,16 +68,23 @@
         }]
       };
 
-      //Create Credential Interface Query
-      const credentialInterfaceQuery = {
-       web: {
-          VerifiablePresentation: testVpr,
-        },
-        recommendedHandlerOrigins: [
-          "https://wallet.example.chapi.io/"
-        ]
-      };
+      // fake OID4VP url
+      const searchParams = new URLSearchParams();
+      searchParams.set('fake', JSON.stringify(testVpr));
+      const oid4vpUrl = `https://test.example?${searchParams}`;
 
+      // create Credential Interface Query
+      const credentialInterfaceQuery = {
+        web: {
+          VerifiablePresentation: testVpr,
+          /*recommendedHandlerOrigins: [
+            "https://wallet.example.chapi.io/"
+          ],*/
+          protocols: {
+            OID4VP: oid4vpUrl
+          }
+        }
+      };
 
       console.log('Requesting credential...');
       document.getElementById('getResults').innerText = 'Requesting credential...';
