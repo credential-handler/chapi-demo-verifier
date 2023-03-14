@@ -73,7 +73,7 @@
       {
         const searchParams = new URLSearchParams();
         searchParams.set('fake', JSON.stringify(testVpr));
-        const oid4vpUrl = `https://test.example?${searchParams}`;
+        oid4vpUrl = `https://test.example?${searchParams}`;
       }
       console.log('oid4vpUrl', oid4vpUrl);
 
@@ -81,7 +81,7 @@
       let vcapiUrl;
       {
         const searchParams = new URLSearchParams();
-        searchParams.set('fake', JSON.stringify(testVpr));
+        searchParams.set('fakevpr', JSON.stringify(testVpr));
         vcapiUrl = 'https://vcapi.example/exchangers/z123/exchanges/z456?' +
           searchParams;
       }
