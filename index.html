@@ -69,9 +69,23 @@
       };
 
       // fake OID4VP url
-      const searchParams = new URLSearchParams();
-      searchParams.set('fake', JSON.stringify(testVpr));
-      const oid4vpUrl = `https://test.example?${searchParams}`;
+      let oid4vpUrl;
+      {
+        const searchParams = new URLSearchParams();
+        searchParams.set('fake', JSON.stringify(testVpr));
+        const oid4vpUrl = `https://test.example?${searchParams}`;
+      }
+      console.log('oid4vpUrl', oid4vpUrl);
+
+      // fake VC API url
+      let vcapiUrl;
+      {
+        const searchParams = new URLSearchParams();
+        searchParams.set('fake', JSON.stringify(testVpr));
+        oid4vcUrl = 'https://vcapi.example/exchangers/z123/exchanges/z456?' +
+          searchParams;
+      }
+      console.log('vcapiUrl', vcapiUrl);
 
       // create Credential Interface Query
       const credentialInterfaceQuery = {
@@ -81,7 +95,8 @@
             "https://wallet.example.chapi.io/"
           ],*/
           protocols: {
-            OID4VP: oid4vpUrl
+            OID4VP: oid4vpUrl,
+            vcapi: vcapiUrl
           }
         }
       };
