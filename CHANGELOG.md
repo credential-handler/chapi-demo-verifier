@@ -1,5 +1,10 @@
 # chapi-demo-verifier Changelog
 
+## 2.3.0 - 2026-06-dd
+
+### Added
+- Add non-functional interact URL example.
+
 ## 2.2.0 - 2023-03-14
 
 ### Added
