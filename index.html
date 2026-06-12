@@ -82,7 +82,7 @@
       {
         const searchParams = new URLSearchParams();
         searchParams.set('fakevpr', JSON.stringify(testVpr));
-        vcapiUrl = 'https://vcapi.example/exchangers/z123/exchanges/z456?' +
+        vcapiUrl = 'https://vcapi.example/workflows/z123/exchanges/z456?' +
           searchParams;
       }
       console.log('vcapiUrl', vcapiUrl);
@@ -96,7 +96,10 @@
           ],*/
           protocols: {
             OID4VP: oid4vpUrl,
-            vcapi: vcapiUrl
+            vcapi: vcapiUrl,
+            // invalid interact URL; only added to trigger QR code display
+            // for external device
+            interact: 'https://coordinator.vcapi.example/interactions/abc?iuv=1'
           }
         }
       };
