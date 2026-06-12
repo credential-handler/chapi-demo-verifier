@@ -1,6 +1,6 @@
 # chapi-demo-verifier Changelog
 
-## 2.3.0 - 2026-06-dd
+## 2.3.0 - 2026-06-12
 
 ### Added
 - Add non-functional interact URL example.
