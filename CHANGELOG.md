@@ -1,6 +1,6 @@
 # chapi-demo-verifier Changelog
 
-## 2.3.1 - 2026-06-xx
+## 2.3.1 - 2026-06-12
 
 ### Changed
 - Fix packaging workflow.
